@@ -25,12 +25,12 @@ export const toggle = id => ({
     id
 });
 
-// 초기 상태
 export const remove = id => ({
     type: REMOVE,
     id
 });
 
+// 초기 상태
 const initialState = {
     input: '',
     todos: [
@@ -68,7 +68,7 @@ function todos(state = initialState, action) {
         case REMOVE:
             return {
                 ...state,
-                todos: state.todos.filter(todo => todo.id !== action.todo)
+                todos: state.todos.filter(todo => todo.id !== action.id)
             };
         default:
             return state;
