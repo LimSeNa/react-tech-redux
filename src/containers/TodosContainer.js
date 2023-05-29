@@ -1,3 +1,4 @@
+import React from "react";
 import Todos from "../components/Todos";
 import {useSelector} from "react-redux";
 import {changeInput, insert, remove, toggle} from "../modules/todos";
@@ -25,4 +26,4 @@ const TodosContainer = () => {
     );
 };
 
-export default TodosContainer;
+export default React.memo(TodosContainer);
